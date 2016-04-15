@@ -1,12 +1,14 @@
 var Bleacon = require('./index');
 var math = require('mathjs');
+var x,y,z;
 Bleacon.startAdvertising('e2c56db5dffb48d2b060d0f5a71096e0',0,0,-59);
 Bleacon.on('discover', function(bleacon){
-var x,y,z;
+//var x,y,z;
 if(bleacon.major == 9003) x = -(bleacon.rssi);
 if(bleacon.major == 9006) y= -(bleacon.rssi);
 if(bleacon.major == 9001) z = -(bleacon.rssi);
-
+var refresh = setInterval(function(bleacon){},10000);
+if(typeof(x)!='undefined' && typeof(y)!='undefined' && typeof(z)!='undefined'){
 var map0 = new Array();
 map0[0] = new Array(x,y,z);
 
@@ -242,14 +244,14 @@ var map21 = new Array();
  map21[8] = new Array(79,72,68);
  map21[9] = new Array(81,79,65);
 
-var good = false;
- if (typeof(map0[0][0])!='undefined' && typeof(map0[0][1])!='undefined' && typeof(map0[0][2])!='undefined' ) {
-     good = true;
-        console.log(map0);
-    };
+//var good = false;
+// if (typeof(map0[0][0])!='undefined' && typeof(map0[0][1])!='undefined' && typeof(map0[0][2])!='undefined' ) {
+//     good = true;
+//        console.log(map0);
+//    };
 
- if (good)
- {
+// if (good)
+// {
 
  	var r = []; var diff = [];
  	for(var i=0; i<map1.length; i++)
