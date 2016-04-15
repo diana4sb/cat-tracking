@@ -1,4 +1,4 @@
-var Bleacon = require('noble');
+var Bleacon = require('./index');
 var math = require('mathjs');
 Bleacon.startAdvertising('e2c56db5dffb48d2b060d0f5a71096e0',0,0,-59);
 Bleacon.on('discover', function(bleacon){
