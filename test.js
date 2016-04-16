@@ -1,6 +1,6 @@
 var Bleacon = require('./index');
 var math = require('mathjs');
-var x,y,z;
+var x,y,z;var g = []; var count = 0;
 Bleacon.startAdvertising('e2c56db5dffb48d2b060d0f5a71096e0',0,0,-59);
 Bleacon.on('discover', function(bleacon){
 //var x,y,z;
@@ -422,38 +422,43 @@ var map21 = new Array();
  	varr = math.var(r);
  	diff.push(varr);
  	r = [];
-
+ 
  	var min = math.min(diff);
  	for(var i = 0; i< diff.length; i++)
  	{
  		if(min==diff[i])
  		{
- 			if(i==0) console.log("0 6");
- 			else if(i==1) console.log("1 6");
- 			else if(i==2) console.log("2 6");
- 			else if(i==3) console.log("0 5");
- 			else if(i==4) console.log("1 5");
- 			else if(i==5) console.log("2 5");
- 			else if(i==6) console.log("0 4");
- 			else if(i==7) console.log("1 4");
- 			else if(i==8) console.log("2 4");
- 			else if(i==9) console.log("0 3");
- 			else if(i==10) console.log("1 3");
- 			else if(i==11) console.log("2 3");
- 			else if(i==12) console.log("0 2");
- 			else if(i==13) console.log("1 2");
- 			else if(i==14) console.log("2 2");
- 			else if(i==15) console.log("0 1");
- 			else if(i==16) console.log("1 1");
- 			else if(i==17) console.log("2 1");
- 			else if(i==18) console.log("0 0");
- 			else if(i==19) console.log("1 0");
- 			else if(i==20) console.log("2 0");
+    if(i==0) {count++; g.push("0 6");}//console.log("0 6");
+ 			else if(i==1) {count++; g.push("1 6");}//console.log("1 6");
+ 			else if(i==2) {count++; g.push("2 6");}//console.log("2 6");
+ 			else if(i==3) {count++; g.push("0 5");}//console.log("0 5");
+ 			else if(i==4) {count++; g.push("1 5");}//console.log("1 5");
+ 			else if(i==5) {count++; g.push("2 5");}//console.log("2 5");
+ 			else if(i==6) {count++; g.push("0 4");}//console.log("0 4");
+ 			else if(i==7) {count++; g.push("1 4");}//console.log("1 4");
+ 			else if(i==8) {count++; g.push("2 4");}//console.log("2 4");
+ 			else if(i==9) {count++; g.push("0 3");}//console.log("0 3");
+ 			else if(i==10){count++; g.push("1 3");}//console.log("1 3");
+ 			else if(i==11){count++; g.push("2 3");}//console.log("2 3");
+ 			else if(i==12){count++; g.push("0 2");}//console.log("0 2");
+ 			else if(i==13){count++; g.push("1 2");}//console.log("1 2");
+ 			else if(i==14){count++; g.push("2 2");}//console.log("2 2");
+ 			else if(i==15){count++; g.push("0 1");}//console.log("0 1");
+ 			else if(i==16){count++; g.push("1 1");}//console.log("1 1");
+ 			else if(i==17){count++; g.push("2 1");}//console.log("2 1");
+ 			else if(i==18){count++; g.push("0 0");}//console.log("0 0");
+ 			else if(i==19){count++; g.push("1 0");}//console.log("1 0");
+ 			else if(i==20){count++; g.push("2 0");}//console.log("2 0"); 	
  		
  		}
 
  	}
-
+ 	if(count == 9)
+ 	{
+ 		count = 0;
+ 		console.log(math.mode(g));
+ 		g = [];
+ 	}
 
  }
 });
