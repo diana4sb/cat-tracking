@@ -8,7 +8,7 @@ Bleacon.on('discover', function(bleacon){
 if(bleacon.major == 9003) x = -(bleacon.rssi);
 if(bleacon.major == 9006) y= -(bleacon.rssi);
 if(bleacon.major == 9001) z = -(bleacon.rssi);
-var refresh = setInterval(function(bleacon){},10000);
+var refresh = setInterval(function(bleacon){},500);
 if(typeof(x)!='undefined' && typeof(y)!='undefined' && typeof(z)!='undefined'){
 var map0 = new Array();
 map0[0] = new Array(x,y,z);
@@ -454,7 +454,7 @@ var map21 = new Array();
  		}
 
  	
- 	if(count == 9)
+ 	if(count == 25)
  	{
  		count = 0;
  		console.log(math.mode(g));
