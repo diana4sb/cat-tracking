@@ -1,5 +1,6 @@
 var Bleacon = require('./index');
 var math = require('mathjs');
+var fs = require('fs');
 var x,y,z;var g = []; var count = 0;
 Bleacon.startAdvertising('e2c56db5dffb48d2b060d0f5a71096e0',0,0,-59);
 Bleacon.on('discover', function(bleacon){
@@ -452,14 +453,17 @@ var map21 = new Array();
  		
  		}
 
- 	}
+ 	
  	if(count == 9)
  	{
  		count = 0;
  		console.log(math.mode(g));
+ 		fs.writeFile('2D.txt',math.mode(g),function(err){
+ 		 if(err){return console.error(err);}
+ 		});
  		g = [];
  	}
-
+}
  }
 });
 Bleacon.startScanning();
