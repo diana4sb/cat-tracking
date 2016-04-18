@@ -25,43 +25,43 @@ QT_BEGIN_NAMESPACE
 class Ui_MainWindow
 {
 public:
-    QMenuBar *menuBar;
-    QToolBar *mainToolBar;
-    QWidget *centralWidget;
-    QStatusBar *statusBar;
+	QMenuBar *menuBar;
+	QToolBar *mainToolBar;
+	QWidget *centralWidget;
+	QStatusBar *statusBar;
 
-    void setupUi(QMainWindow *MainWindow)
-    {
-        if (MainWindow->objectName().isEmpty())
-            MainWindow->setObjectName(QStringLiteral("MainWindow"));
-        MainWindow->resize(400, 300);
-        menuBar = new QMenuBar(MainWindow);
-        menuBar->setObjectName(QStringLiteral("menuBar"));
-        MainWindow->setMenuBar(menuBar);
-        mainToolBar = new QToolBar(MainWindow);
-        mainToolBar->setObjectName(QStringLiteral("mainToolBar"));
-        MainWindow->addToolBar(mainToolBar);
-        centralWidget = new QWidget(MainWindow);
-        centralWidget->setObjectName(QStringLiteral("centralWidget"));
-        MainWindow->setCentralWidget(centralWidget);
-        statusBar = new QStatusBar(MainWindow);
-        statusBar->setObjectName(QStringLiteral("statusBar"));
-        MainWindow->setStatusBar(statusBar);
+	void setupUi(QMainWindow *MainWindow)
+	{
+		if (MainWindow->objectName().isEmpty())
+			MainWindow->setObjectName(QStringLiteral("MainWindow"));
+		MainWindow->resize(400, 300);
+		menuBar = new QMenuBar(MainWindow);
+		menuBar->setObjectName(QStringLiteral("menuBar"));
+		MainWindow->setMenuBar(menuBar);
+		mainToolBar = new QToolBar(MainWindow);
+		mainToolBar->setObjectName(QStringLiteral("mainToolBar"));
+		MainWindow->addToolBar(mainToolBar);
+		centralWidget = new QWidget(MainWindow);
+		centralWidget->setObjectName(QStringLiteral("centralWidget"));
+		MainWindow->setCentralWidget(centralWidget);
+		statusBar = new QStatusBar(MainWindow);
+		statusBar->setObjectName(QStringLiteral("statusBar"));
+		MainWindow->setStatusBar(statusBar);
 
-        retranslateUi(MainWindow);
+		retranslateUi(MainWindow);
 
-        QMetaObject::connectSlotsByName(MainWindow);
-    } // setupUi
+		QMetaObject::connectSlotsByName(MainWindow);
+	} // setupUi
 
-    void retranslateUi(QMainWindow *MainWindow)
-    {
-        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", 0));
-    } // retranslateUi
+	void retranslateUi(QMainWindow *MainWindow)
+	{
+		MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", 0));
+	} // retranslateUi
 
 };
 
 namespace Ui {
-    class MainWindow: public Ui_MainWindow {};
+	class MainWindow: public Ui_MainWindow {};
 } // namespace Ui
 
 QT_END_NAMESPACE

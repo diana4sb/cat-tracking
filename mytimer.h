@@ -5,13 +5,14 @@
 
 class MyTimer : public QObject
 {
-    Q_OBJECT
-public:
-    MyTimer();
-    QTimer *timer;
+        Q_OBJECT
+    public:
+                MyTimer();
+                    QTimer *timer;
 
-public slots:
-    void MyTimerSlot();
+                    public slots:
+                            void MyTimerSlot();
+
 };
 
 #endif // MYTIMER_H
