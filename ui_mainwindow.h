@@ -1,67 +1,70 @@
 /********************************************************************************
-** Form generated from reading UI file 'mainwindow.ui'
+** Form generated from reading ui file 'mainwindow.ui'
 **
-** Created by: Qt User Interface Compiler version 5.6.0
+** Created: Sun Apr 17 21:32:28 2016
+**      by: Qt User Interface Compiler version 4.5.1
 **
-** WARNING! All changes made in this file will be lost when recompiling UI file!
+** WARNING! All changes made in this file will be lost when recompiling ui file!
 ********************************************************************************/
 
 #ifndef UI_MAINWINDOW_H
 #define UI_MAINWINDOW_H
 
 #include <QtCore/QVariant>
-#include <QtWidgets/QAction>
-#include <QtWidgets/QApplication>
-#include <QtWidgets/QButtonGroup>
-#include <QtWidgets/QHeaderView>
-#include <QtWidgets/QMainWindow>
-#include <QtWidgets/QMenuBar>
-#include <QtWidgets/QStatusBar>
-#include <QtWidgets/QToolBar>
-#include <QtWidgets/QWidget>
+#include <QtGui/QAction>
+#include <QtGui/QApplication>
+#include <QtGui/QButtonGroup>
+#include <QtGui/QHeaderView>
+#include <QtGui/QMainWindow>
+#include <QtGui/QMenuBar>
+#include <QtGui/QStatusBar>
+#include <QtGui/QToolBar>
+#include <QtGui/QWidget>
 
 QT_BEGIN_NAMESPACE
 
 class Ui_MainWindow
 {
 public:
-	QMenuBar *menuBar;
-	QToolBar *mainToolBar;
-	QWidget *centralWidget;
-	QStatusBar *statusBar;
+    QWidget *centralWidget;
+    QMenuBar *menuBar;
+    QToolBar *mainToolBar;
+    QStatusBar *statusBar;
 
-	void setupUi(QMainWindow *MainWindow)
-	{
-		if (MainWindow->objectName().isEmpty())
-			MainWindow->setObjectName(QStringLiteral("MainWindow"));
-		MainWindow->resize(400, 300);
-		menuBar = new QMenuBar(MainWindow);
-		menuBar->setObjectName(QStringLiteral("menuBar"));
-		MainWindow->setMenuBar(menuBar);
-		mainToolBar = new QToolBar(MainWindow);
-		mainToolBar->setObjectName(QStringLiteral("mainToolBar"));
-		MainWindow->addToolBar(mainToolBar);
-		centralWidget = new QWidget(MainWindow);
-		centralWidget->setObjectName(QStringLiteral("centralWidget"));
-		MainWindow->setCentralWidget(centralWidget);
-		statusBar = new QStatusBar(MainWindow);
-		statusBar->setObjectName(QStringLiteral("statusBar"));
-		MainWindow->setStatusBar(statusBar);
+    void setupUi(QMainWindow *MainWindow)
+    {
+        if (MainWindow->objectName().isEmpty())
+            MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
+        MainWindow->resize(400, 300);
+        centralWidget = new QWidget(MainWindow);
+        centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
+        MainWindow->setCentralWidget(centralWidget);
+        menuBar = new QMenuBar(MainWindow);
+        menuBar->setObjectName(QString::fromUtf8("menuBar"));
+        menuBar->setGeometry(QRect(0, 0, 400, 21));
+        MainWindow->setMenuBar(menuBar);
+        mainToolBar = new QToolBar(MainWindow);
+        mainToolBar->setObjectName(QString::fromUtf8("mainToolBar"));
+        MainWindow->addToolBar(Qt::TopToolBarArea, mainToolBar);
+        statusBar = new QStatusBar(MainWindow);
+        statusBar->setObjectName(QString::fromUtf8("statusBar"));
+        MainWindow->setStatusBar(statusBar);
 
-		retranslateUi(MainWindow);
+        retranslateUi(MainWindow);
 
-		QMetaObject::connectSlotsByName(MainWindow);
-	} // setupUi
+        QMetaObject::connectSlotsByName(MainWindow);
+    } // setupUi
 
-	void retranslateUi(QMainWindow *MainWindow)
-	{
-		MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", 0));
-	} // retranslateUi
+    void retranslateUi(QMainWindow *MainWindow)
+    {
+        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", 0, QApplication::UnicodeUTF8));
+        Q_UNUSED(MainWindow);
+    } // retranslateUi
 
 };
 
 namespace Ui {
-	class MainWindow: public Ui_MainWindow {};
+    class MainWindow: public Ui_MainWindow {};
 } // namespace Ui
 
 QT_END_NAMESPACE

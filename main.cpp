@@ -3,7 +3,7 @@
 #include <QGraphicsGridLayout>
 #include <QWidget>
 #include <QtGui>
-#include <QTCore>
+#include <QtCore>
 #include <QLabel>
 #include <QLayout>
 #include <QRect>
